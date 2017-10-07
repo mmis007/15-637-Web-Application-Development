@@ -1,0 +1,89 @@
+
+{% extends 'grumblr/base.html' %}
+{% block content %}
+
+{% load static %}
+
+<div class="content container" >
+    <div class="col-sm-3 col-sm-offset-1 col-md-2">
+        <!-- Profile -->
+        <div class="row profile profile-box">
+            <center>
+                <img src="{% url 'photo' user.pk %}"><br/>
+                <a class="id" href="{% url 'profile' pk=user.pk %}">@{{ user.username }}</a>
+            </center>
+        </div>
+
+        <div class="row profile-box">
+            <center>
+
+                <a href="{% url 'follow_stream' pk=user.pk %}" class="link">Following</a>
+            </center>
+        </div>
+
+        <div class="row search-box">
+
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Posts -->
+    <div class="posts">
+
+        <div class="col-sm-6 col-sm-offset-1 col-md-7">
+
+            <div class="row posts-box">
+                <form action="{% url 'home' %}" method="post">
+                    <textarea name="text" type="text" class="form-control" placeholder="Say something here :)"></textarea>
+                    <div class="row">
+
+                        <div class="col-xs-9">
+                            <p class="new-post-handwritten">What's new with you?</p>
+
+                        </div>
+
+                        <div class="col-sm-2 col-md-offset-1">
+                            <button name="post_new" type="submit" class="btn btn-sm btn-primary">POST</button>
+                        </div>
+                    </div>
+                    {% csrf_token %}
+
+                    {{ form_new_post.text.errors }}
+                </form>
+
+            </div>
+
+            {% for post in posts %}
+                <div class="row posts-box">
+
+                    <div class="row">
+                        <div class="col-xs-3 col-md-2">
+                            <img class="head" src="{% url 'photo' post.user.pk %}" >
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="id-title"><a href="{% url 'profile' pk=post.user.pk %}">@{{ post.user }}</a></p>
+                            <p class="post-date">{{ post.date }}</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <p class="post-content">{{ post.text|linebreaksbr }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

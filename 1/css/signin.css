@@ -1,0 +1,111 @@
+body.sign  {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  background-repeat:no-repeat;
+
+    background-size: 800px 500px;
+  background-attachment: fixed;
+  background-position: 70px 70px;
+
+
+}
+
+ .sign .motto{
+
+  margin-top: 360px;
+  margin-left: 200px;
+  line-height: 130%;
+font-family: LucidaHandwriting-Italic;
+font-size: 24px;
+word-spacing: 5px;
+color: #FFFFFF;
+text-shadow: 1px 1px 2px rgba(0,0,0,0.50);
+position: fixed;
+}
+
+
+
+.sign .logo {
+font-family: LucidaHandwriting-Italic;
+text-align:center;
+font-size: 30px;
+color: #337ab7;
+text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+margin-bottom: 20px;
+}
+
+.signin-box {
+margin-top: 80px;
+opacity: 0.95;
+background: #FAFAFA;
+border: 1px solid #979797;
+border-radius: 5px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="username"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+.form-signin button{
+font-family: LucidaHandwriting-Italic;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+.form-signin p{
+margin-top: 10px;
+text-align: center;
+font-size: 14px;
+color: #8E8E8E;
+}
+
+.form-signin .link a{
+margin-top: 10px;
+text-align: center;
+font-size: 14px;
+color: #337ab7;
+}
+
+
+
+
+
+
+
+
+

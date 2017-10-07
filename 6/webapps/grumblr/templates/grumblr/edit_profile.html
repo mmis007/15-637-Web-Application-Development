@@ -1,0 +1,35 @@
+{% extends "grumblr/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<table class="col-md-8 col-md-offset-2 setting-box">
+
+    <td class="col-sm-3 list_group">
+        <a href="{% url 'edit_profile' %}" class="list-group-item">Edit Profile</a>
+        <a href="{% url 'change_password' %}" class="list-group-item">Change Password</a>
+    </td>
+
+    <td class="col-sm-9 setting-box-right">
+        <form enctype="multipart/form-data" action="{% url 'edit_profile' %}" method="post" style="margin-top: 50px">
+            <table>
+                <tr>{{form_user}}</tr>
+                <tr>{{ form_profile }}</tr>
+                {% csrf_token %}
+                <tr><button class="btn " type="submit" value="Save profile">Save Profile</button>
+                <br><br>
+            </table>
+        </form>
+
+
+        {% if form_profile.photo.value %}
+            <img src="{% url 'photo' user.pk %}" alt="{{ form_profile.user.username.value }}" width="200px">
+        {% endif %}
+        {{ message }}
+
+    </td>
+
+</table>
+
+
+{% endblock %}

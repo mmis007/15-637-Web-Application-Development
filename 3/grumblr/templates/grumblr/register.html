@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gramblr Signup</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% load static %}
+    <link href="{% static 'grumblr/grumblr.css' %}" rel="stylesheet">
+</head>
+
+{% load static %}
+<body class="sign" background="{% static 'grumblr/img/lips.png' %}">
+
+    {% for error in errors %}
+        <p style="color: red">
+            {{ error }}
+        </p>
+    {% endfor %}
+
+    <div class="container">
+
+        <div class="collapse navbar-collapse" >
+
+            <h1 class="motto">Record your stories,<br>
+            &nbsp&nbspShare with friends,<br>
+            &nbsp&nbsp&nbsp&nbspand Enjoy your life!</h1>
+
+        </div>
+
+        <div class="col-md-4 col-sm-5  col-sm-offset-7 register-box">
+            <form class="form-register" method="post">
+                <h2 class="logo">grumblr</h2>
+
+                <label for="first_name" class="sr-only">First Name</label>
+                <input type="first_name" name="first_name" class="form-control" placeholder="First Name" required autofocus>
+
+                <label for="last_name" class="sr-only">Last Name</label>
+                <input type="last_name" name="last_name" class="form-control" placeholder="Last Name" required>
+
+                <label for="username" class="sr-only">Username</label>
+                <input type="username" name="username" class="form-control" placeholder="Username" required value = {{username}} >
+
+                <label for="password1" class="sr-only">Password</label>
+                <input type="password1" name="password1" class="form-control" placeholder="Password" required>
+
+                <label for="password2" class="sr-only">Confirm Password</label>
+                <input type="password2" name="password2" class="form-control" placeholder="Confirm Password" required>
+
+                <p><br>By clicking Sign up, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</p>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up!</button>
+
+                {% csrf_token %}
+            </form>
+        </div>
+    </div> <!-- /container -->
+
+</body>

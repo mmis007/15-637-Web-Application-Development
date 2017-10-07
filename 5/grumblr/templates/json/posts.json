@@ -1,0 +1,11 @@
+{"max-time":"{{max_time|date:"c"}}",
+  "posts":[
+    {% for post in posts %}
+      {%spaceless%}
+      {% include 'json/post.json' %}
+      {%endspaceless%}
+      {% if not forloop.last %},
+      {% endif %}
+    {% endfor %}
+  ]
+}

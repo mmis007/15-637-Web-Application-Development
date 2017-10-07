@@ -1,0 +1,7 @@
+Recommendations from my classmates:
+
+1. remove the background picture in the profile and global pages, to make the webpage simple to read.
+2. move the bar under navbar to the left side of the page, which is under the profile box, so that the left and right side of the webpage is more balanced.
+3. they helped me to choose the background image of the signin and signup page. I offered two image: one is the red lips, the other one is speech bubble, and they said that the red lip is more impressive, so I chose the red lips as my background.
+4. they suggested me to set the opacity of the boxed in the global and profile pages to be 1, that is not transparent, to make the messages easier to read.
+5. use rounded rectangle rather than rectangle for boxes. 

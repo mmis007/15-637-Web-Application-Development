@@ -1,0 +1,69 @@
+.calculator-box{
+margin-top: 20px;
+width: 260px;
+background: #FAFAFA;
+border: 10px solid #EEEEEE;
+border-radius: 5px;
+padding-bottom: 20px;
+padding-top: 20px;
+text-align:  center;
+}
+
+
+
+.screen {
+	font-size: 24px;
+	color: #336666;
+	padding-right: 10px;
+	text-align: right;
+
+	height: 50px;
+	width: 230px;
+	border-radius: 5px;
+		background-color: #FFFFCC;
+border: 1px solid #99CCCC;
+
+margin-bottom: 10px;
+}
+
+.calc .digit {
+	font-size: 24px;
+	color: #336666;
+	width: 55px;
+	height: 50px;
+	text-align: center;
+	background-color: #FFFFCC;
+border: 1px solid #99CCCC;
+border-radius: 5px;
+margin-left: 3px;
+margin-top: 5px;
+
+
+}
+
+.calc .operator {
+	font-size: 24px;
+	color: #336666;
+	width: 55px;
+	height: 50px;
+	text-align: center;
+	background-color: #99CCCC;
+border: 1px solid #FFFFCC;
+border-radius: 5px;
+margin-left: 3px;
+margin-top: 5px;
+}
+
+.calc .operator:hover,
+.calc .digit:hover{
+	font-size: 24px;
+	color: #336666;
+	width: 55px;
+	height: 50px;
+	text-align: center;
+	background-color: #FFCCCC;
+border: 1px solid #FFFFCC;
+border-radius: 5px;
+margin-left: 3px;
+margin-top: 5px;
+}

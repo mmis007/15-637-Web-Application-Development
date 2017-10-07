@@ -1,0 +1,3 @@
+{"id":{{comment.id}},
+
+"html":"{{comment.html|safe}}"}

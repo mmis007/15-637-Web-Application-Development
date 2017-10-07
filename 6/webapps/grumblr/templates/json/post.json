@@ -1,0 +1,3 @@
+{"id":{{post.id}},
+
+"html":"{{post.html|safe}}"}
